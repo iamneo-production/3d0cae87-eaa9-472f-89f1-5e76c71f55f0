@@ -1,0 +1,70 @@
+<p>EVENTS</p>
+<hr/>
+  <!--    Event and venue details here-->
+
+  
+      <p>EVENTS</p>
+      <hr/>
+        
+        <!--    Event and venue details here-->
+        <table class="table table-striped"> 
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>UserAddress</th>
+      
+          <th>MobNo</th>
+          <th>romate</th>
+          <th>Address</th>
+          <th>UserAddress</th>
+      
+          <th>UserAddress</th>
+      
+      
+        </tr>
+          <tr *ngFor = "let row of events">
+ 
+              <td>  
+              {{row.name}}
+              </td>
+              <td>  
+                {{row.applicantName}}
+                </td>
+                <td>  
+                  {{row.applicantAddress}}
+                  </td>
+                  <td>  
+                    {{row.applicantMob}}
+                    </td>
+                    <td>  
+                      {{row.applicantMob}}
+                      </td>
+                      <td>  
+                        {{row.fromDate}}
+                        </td>
+                        <td>  
+                          {{row.endDate}}
+                          </td>
+      
+                          <td>  
+                            <p><a routerLink="/venue" >{{row.venueID}}</a> </p>
+                            </td>
+      
+                           
+            </tr>
+      
+       </table>
+      
+      <div>
+            
+      <p> Event Name <input type="text" [(ngModel)] = "name" /> </p>
+      <p> Event Address<input type="text" [(ngModel)] = "address" /> </p>
+      <p> Applicant Name<input type="text" [(ngModel)] = "applicantName" /> </p>
+      <p>Address<input type="text" [(ngModel)] = "applicantAddress" /> </p>
+      <p>Venue<input type="text" [(ngModel)] = "venueID" /> </p>
+      <p>Teaam<input type="text" [(ngModel)] = "teamID" /> </p>
+      <p><a routerLink="/venue" >Venue</a> </p>
+      <p><button (click)="saveEvent()" class="btn btn-primary"  >Save</button> </p>
+      
+      
+      </div>
