@@ -1,0 +1,45 @@
+<hr/> 
+<p>Enter details to register as given below</p>
+<p>Select user type </p>
+<p><select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" style="width: 150px;" (change)="doSelectUserType($event)">
+    <option *ngFor=" let c of usertypes" [value] = "c.id">{{c.type}}</option>
+    
+    </select> </p>
+    <!-- p>selected USerType is</p>
+    <div> {{userType}}</div -->
+   
+    
+   <p> Enter Email  </p>
+    <div class="form-floating mb-3" style="width: 250px;">
+    <input type="email" class="form-control" [(ngModel)] = "email" />
+    <label for="floatingInput">Email address</label>
+</div>
+<p> User Name</p>
+    <div class="form-floating mb-3" style="width: 250px;">
+        <input type="text" class="form-control" [(ngModel)] = "username" />
+        <label for="floatingInput">User name</label>
+    </div>
+    
+<p> Mobile Number</p>
+<div class="form-floating mb-3" style="width: 250px;">
+    <input type="text" class="form-control" [(ngModel)] = "mobNo" />
+    <label for="floatingInput">Mobile Number</label>
+</div>
+
+<p> Password</p>
+<div class="form-floating mb-3" style="width: 250px;">
+    <input type="text" class="form-control" [(ngModel)] = "passwd" />
+    <label for="floatingInput"> Password </label>
+</div>
+
+<p>Confirm Password</p>
+<div class="form-floating mb-3" style="width: 250px;">
+    <input type="text" class="form-control" [(ngModel)] = "confPasswd" />
+    <label for="floatingInput">Mobile Number</label>
+</div>
+
+
+<p><button (click)="submit()" class="btn btn-primary" >Submit</button> </p>
+<p>Already a User? <a routerLink="/login" >Login</a> </p>
+
+

@@ -1,0 +1,56 @@
+
+<hr/> 
+<h3>Team Details</h3>
+
+
+  <div> 
+<table class="table table-striped"> 
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Country</th>
+  
+    </tr>
+      <tr *ngFor = "let row of teams">
+        
+          <td>  
+          {{row.teamname}}
+          </td>
+          <td>  
+            {{row.description}}
+            </td>
+            <td>  
+              {{row.country}}
+              </td>
+              
+  
+                       
+        </tr>
+  
+   </table>
+
+</div>
+
+
+
+
+<div class="form-floating mb-3">
+  <input type="text" class="form-control" [(ngModel)] = "teamname" />
+  <label for="floatingInput">Team name</label>
+</div>
+  
+<div class="form-floating mb-3">
+  <input type="text" class="form-control" [(ngModel)] = "description" />
+  <label for="floatingInput">Description</label>
+</div>
+
+<div class="form-floating mb-3">
+    <input type="text" class="form-control" [(ngModel)] = "country" />
+    <label for="floatingInput">Country</label>
+  </div>
+  
+
+
+<p><button (click)="createTeam()" class="btn btn-primary">Submit</button> </p>
+
+

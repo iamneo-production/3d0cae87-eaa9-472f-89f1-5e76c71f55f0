@@ -1,0 +1,26 @@
+
+<hr/> 
+<p>Login</p>
+   
+<div class="form-floating mb-3">
+  <input type="text" class="form-control" [(ngModel)] = "username" />
+  <label for="floatingInput">User name</label>
+</div>
+  
+<div class="form-floating mb-3">
+  <input type="password" class="form-control" [(ngModel)] = "passwd" />
+  <label for="floatingInput">Password</label>
+</div>
+
+
+<p><button (click)="login()" class="btn btn-primary">Submit</button> </p>
+
+<div class="alert alert-danger" role="alert" *ngIf="loginflag">
+  Username or Password may be wrong! 
+</div>
+
+<nav class="navbar navbar-light bg-light">
+    <span class="navbar-text">
+      Navbar text with an inline element
+    </span>
+  </nav>

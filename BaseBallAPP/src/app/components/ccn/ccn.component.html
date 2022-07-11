@@ -1,0 +1,32 @@
+<p>ccn works!</p>
+
+<span>{{ title }} app is running!</span>
+<!--  Write html code here -->
+    <div>
+       <!--  Source Currency -->
+      <select (change)="doChange($event)">
+        <option *ngFor=" let c of ccy" [value] = "c.id">{{c.id}}</option>
+        
+        </select>
+        <p>selected id is</p>
+        <div> {{ccyString}}</div>
+        
+        <!--  Target Currency -->
+        <select (change)="doChange($event)">
+          <option *ngFor=" let c of ccy" [value] = "c.id">{{c.id}}</option>
+          
+          </select>
+          <p>selected currency country is</p>
+          <div> {{ccyString}}</div>
+          
+          <input type="text"    [(ngModel)]="ipBox"
+          style="width:300px" />  
+
+        <div>
+            <button type="button" (click)="doConvert($event)" title="smaller">Ok</button>
+           
+          </div>
+
+          <p>The converted currency is {{result}}</p> 
+    
+    </div> 
